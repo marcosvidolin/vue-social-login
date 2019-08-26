@@ -1,6 +1,6 @@
 {
-  "name": "vue-instagram-login",
-  "short_name": "vue-instagram-login",
+  "name": "lojasgram",
+  "short_name": "lojasgram",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#341b47"
 }
