@@ -39,5 +39,11 @@ npm run build --report
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
+# To deploy on Firebase
+``` bash
+npm run build && firebase deploy
+```
+
 ## Refs
+https://jsfiddle.net/sol_b/7zaL3b4u/2/
 https://medium.com/@rachidsakara/how-to-deploy-vue-js-applications-with-firebase-hosting-40cfa7f724e4
