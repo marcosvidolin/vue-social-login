@@ -2,6 +2,8 @@
 
 A basic social login PWA project example using **Vue**, **Firebase** and **Bulma**.
 
+See the [demo](https://vue-social-login-6073e.firebaseapp.com).
+
 ## Created as
 ```bash
 Vue CLI v3.11.0
