@@ -39,6 +39,18 @@ yarn run test
 yarn run lint
 ```
 
+### Firebase Deploy
+
+To connect your local machine to your Firebase account
+```bash
+firebase login
+```
+
+To build and deploys the dist folder content to your Firebase project
+```bash
+npm run build && firebase deploy
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
