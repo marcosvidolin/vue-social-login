@@ -20,7 +20,8 @@
               <span>Sign in with Instagram</span>
             </a>
             <br />
-            <a class="button is-google is-outlined is-info is-rounded is-medium is-fullwidth">
+            <a class="button is-google is-outlined is-info is-rounded is-medium is-fullwidth"
+                @click="googleLogin">
               <span class="icon">
                 <i class="fab fa-google"></i>
               </span>
@@ -36,3 +37,22 @@
     <!-- /Hero Body -->
   </section>
 </template>
+
+<script>
+import firebase from 'firebase';
+
+export default {
+    name: 'login',
+    methods: {
+        googleLogin() {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(() => {
+                this.$router.replace('home');
+            }).catch((err) => {
+                // TODO:
+                alert(err.message);
+            });
+        }
+    }
+}
+</script>
