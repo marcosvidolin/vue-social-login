@@ -9,13 +9,16 @@
     <div id="nav">
       <p>Have a cup of coffee: <i class="fas fa-coffee"></i> </p>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/login">Login</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
+@import "~bulma/css/bulma.css";
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
