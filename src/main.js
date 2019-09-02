@@ -6,6 +6,8 @@ import firebase from 'firebase'
 
 Vue.config.productionTip = false
 
+let app = '';
+
 // Initialize Firebase
 firebase.initializeApp({
   apiKey: "YOUR_API_KEY",
