@@ -16,7 +16,11 @@ firebase.initializeApp({
   messagingSenderId: "YOUR_MESSAGING_SEND_ID"
 });
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      render: h => h(App)
+    }).$mount('#app');
+  }
+});
