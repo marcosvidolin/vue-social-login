@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import firebase from 'firebase'
 
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -32,4 +33,18 @@ export default new Router({
       }
     }
   ]
-})
+});
+
+router.beforeEach((to, next, from) => {
+  const currentUser = firebase.auth().currentUser;
+  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+  if (requiresAuth && !currentUser) {
+    next('login');
+  } else if (!requiresAuth && currentUser) {
+    next('home');
+  } else {
+    next();
+  }
+});
+
+export default router;
