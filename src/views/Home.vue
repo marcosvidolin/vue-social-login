@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home has-background-white-ter">
+    <my-navbar></my-navbar>
+    <div class="section">
+      <figure class="image is-128x128">
+        <img v-bind:src="user.photoURL" />
+      </figure>
+      <div class="container">{{ user.displayName }}</div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import firebase from "firebase";
+import MyNavbar from "@/components/MyNavbar.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld
+    MyNavbar
+  },
+  data: function() {
+    return {
+      user: firebase.auth().currentUser
+    };
   }
-}
+};
 </script>
