@@ -53,6 +53,9 @@ To build and deploys the dist folder content to your Firebase project
 npm run build && firebase deploy
 ```
 
+### Instagram Login
+[How to](https://github.com/firebase/functions-samples/tree/master/instagram-auth)
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
