@@ -4,6 +4,7 @@ import firebase from 'firebase'
 
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
+import InstagramAuth from '@/views/InstagramAuth.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/instagramauth',
+      name: 'instagramauth',
+      component: InstagramAuth
     },
     {
       path: '/home',
