@@ -14,7 +14,8 @@
           </p>
           <br>
 
-          <a class="button is-outlined is-danger is-rounded is-medium is-fullwidth">
+          <a class="button is-outlined is-danger is-rounded is-medium is-fullwidth"
+            @click="loginWithInstagram">
             <span class="icon">
               <i class="fab fa-instagram"></i>
             </span>
@@ -55,6 +56,9 @@ export default {
           // TODO:
           alert(err.message);
         });
+    },
+    loginWithInstagram() {
+      this.$router.replace("InstagramAuth");
     }
   }
 };
