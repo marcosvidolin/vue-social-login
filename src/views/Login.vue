@@ -14,6 +14,14 @@
           </p>
           <br>
 
+          <a class="button is-outlined is-link is-rounded is-medium is-fullwidth"
+            @click="loginWithFacebook">
+            <span class="icon">
+              <i class="fab fa-facebook"></i>
+            </span>
+            <span>Sign in with Facebook</span>
+          </a>
+          <br />
           <a class="button is-outlined is-danger is-rounded is-medium is-fullwidth"
             @click="loginWithInstagram">
             <span class="icon">
@@ -44,6 +52,19 @@ import firebase from "firebase";
 export default {
   name: "login",
   methods: {
+    loginWithFacebook() {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(() => {
+          this.$router.replace("home");
+        })
+        .catch(err => {
+          // TODO:
+          alert(err.message);
+        });
+    },
     loginWithGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
       firebase
