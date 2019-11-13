@@ -11,7 +11,7 @@
         class="navbar-burger burger"
         aria-label="menu"
         aria-expanded="false"
-        data-target="example-menu"
+        data-target="main-menu"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -19,7 +19,7 @@
       </a>
     </div>
 
-    <div id="example-menu" class="navbar-menu">
+    <div id="main-menu" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
           <a
@@ -57,7 +57,7 @@ export default {
   },
   mounted: function() {
     var burger = document.getElementById("example-burger");
-    var menu = document.getElementById("example-menu");
+    var menu = document.getElementById("main-menu");
     burger.addEventListener("click", function() {
       burger.classList.toggle("is-active");
       menu.classList.toggle("is-active");
