@@ -1,8 +1,15 @@
-# vue-social-login
+<center>
+# Vue Social Login
 
 A basic social login PWA project example using **Vue**, **Firebase** and **Bulma**.
 
 See the [demo](https://vue-social-login-6073e.firebaseapp.com).
+
+<img src="./.github/assets/login-page.png" alt="Login screen" width="200">
+
+<img src="./.github/assets/home-page.png" alt="Home screen" width="203" style="padding-left: 30px">
+
+</center>
 
 ## Created as
 ```bash
