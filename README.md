@@ -1,5 +1,6 @@
-<center>
 # Vue Social Login
+
+<div style="text-align:center">
 
 A basic social login PWA project example using **Vue**, **Firebase** and **Bulma**.
 
@@ -9,7 +10,7 @@ See the [demo](https://vue-social-login-6073e.firebaseapp.com).
 
 <img src="./.github/assets/home-page.png" alt="Home screen" width="203" style="padding-left: 30px">
 
-</center>
+</div>
 
 ## Created as
 ```bash
